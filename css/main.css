@@ -7427,3 +7427,22 @@ ul.intbtn li a:hover{ text-decoration:none;}
     width: 100%;
 }
 
+.form-group .error ~ label:after, .form-group .error ~ .form-control-line:after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 45%;
+ height: 2px;
+ width: 10px;
+ visibility: hidden;
+ background-color: #ff0000;
+ -webkit-transition: 0.2s ease all;
+ -o-transition: 0.2s ease all;
+ transition: 0.2s ease all;
+}
+
+.form-group .error:focus ~ label {
+ color: #ff0000;
+ opacity: 1;
+}
+
