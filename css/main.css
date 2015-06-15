@@ -582,6 +582,7 @@ body {
 	background-size: 100% 100%;
 	color: #313534;
 	-ms-overflow-style: scrollbar;
+	padding-top:20px;
 }
 .container {
 	padding: 0;
@@ -4258,8 +4259,9 @@ li.dropdown-progress .progress {
 }
 .card-head {
 	position: relative;
-	line-height: 52px;
-	min-height: 56px;
+	line-height: 55px;
+	xmin-height: 56px;
+	height: 56px;
 	vertical-align: middle;
 	border-radius: 2px 2px 0 0;
 }
@@ -4336,12 +4338,12 @@ li.dropdown-progress .progress {
 	font-size: 15px;
 	padding: 8px 24px;
 }
-.card-head.card-head-sm {
+/*.card-head.card-head-sm {
 	line-height: 44px;
 	min-height: 48px;
-}
+}*/
 .card-head.card-head-sm header {
-	font-size: 24px;
+	xfont-size: 24px;
 }
 .card-head.card-head-lg {
 	line-height: 76px;
@@ -4527,8 +4529,8 @@ section .style-gray-light .btn-icon-toggle:hover, .offcanvas-pane .style-gray-li
 	color: #ffffff;
 }
 section .style-gray-bright, .offcanvas-pane .style-gray-bright, .card .style-gray-bright, section.style-gray-bright, .offcanvas-pane.style-gray-bright, .card.style-gray-bright {
-	background-color: #bdc1c1;
-	border-color: #bdc1c1;
+	background-color: #cfd2d4;
+	border-color: #cfd2d4;
 	color: #313534;
 }
 section .style-gray-bright .btn-icon-toggle:hover, .offcanvas-pane .style-gray-bright .btn-icon-toggle:hover, .card .style-gray-bright .btn-icon-toggle:hover, section.style-gray-bright .btn-icon-toggle:hover, .offcanvas-pane.style-gray-bright .btn-icon-toggle:hover, .card.style-gray-bright .btn-icon-toggle:hover, section .style-gray-bright .btn-flat:hover, .offcanvas-pane .style-gray-bright .btn-flat:hover, .card .style-gray-bright .btn-flat:hover, section.style-gray-bright .btn-flat:hover, .offcanvas-pane.style-gray-bright .btn-flat:hover, .card.style-gray-bright .btn-flat:hover {
@@ -4743,8 +4745,8 @@ section .style-danger .btn-icon-toggle:hover, .offcanvas-pane .style-danger .btn
 	color: #ffffff;
 }
 section .style-info, .offcanvas-pane .style-info, .card .style-info, section.style-info, .offcanvas-pane.style-info, .card.style-info {
-	background-color: #2196f3;
-	border-color: #2196f3;
+	background-color: #0080db;
+	border-color: #0080db;
 	color: #ffffff;
 }
 section .style-info .btn-icon-toggle:hover, .offcanvas-pane .style-info .btn-icon-toggle:hover, .card .style-info .btn-icon-toggle:hover, section.style-info .btn-icon-toggle:hover, .offcanvas-pane.style-info .btn-icon-toggle:hover, .card.style-info .btn-icon-toggle:hover, section .style-info .btn-flat:hover, .offcanvas-pane .style-info .btn-flat:hover, .card .style-info .btn-flat:hover, section.style-info .btn-flat:hover, .offcanvas-pane.style-info .btn-flat:hover, .card.style-info .btn-flat:hover {
@@ -7047,10 +7049,10 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
 	float:right;
 	border-right:none;
 }
-/*.learn li:last-child {
+.learn li:last-child {
 	float:none;
 	border-right:1px solid #e5e5e5;
-}*/
+}
 .options2 li a {
 	display:inline-block;
 	height:100%;
@@ -7213,8 +7215,8 @@ ul.intbtn li.act{ color:#fff; padding:2px 15px 2px 15px; font-size:14px; border-
 ul.intbtn li.act a{ color:#fff; background: url(../img/remove.png) no-repeat right 10px; padding-right:25px;   }
 ul.intbtn li a:hover{ text-decoration:none;}
 .rewardshead{ overflow:hidden;}
-.rewardshead header{ float:left; padding:15px 24px;}
-.point{ float:right; padding-right:24px; font-size:24px;}
+.rewardshead header{ float:left; padding:0px 24px; line-height:55px;}
+.point{ float:right; padding-right:24px; font-size:24px; line-height:55px;}
 .rewardbody .card-body {
     padding: 0px 12px 12px 0;
 }
@@ -7301,7 +7303,7 @@ ul.intbtn li a:hover{ text-decoration:none;}
 }
 .mygoal .progress-section {
     float: right;
-    margin-top: 10px;
+    margin-top: 30px;
     width: 100%;
 }
 .note{ background:url(../img/note.png) no-repeat 30px 0px;}
@@ -7369,23 +7371,25 @@ ul.intbtn li a:hover{ text-decoration:none;}
 }
 
 .options3 {
-    background: #f2f3f3 none repeat scroll 0 0;
-    width: 20px;
+    background: #fff none repeat scroll 0 0;
 	position:absolute;
-	right:0;
-	top:0;
+	 right: -28px;
+    top: 0;
+    width: 40px;
 }
 .options3 ul {
 	border-top-color: rgba(12, 12, 12, 0.12);
 	padding-left:0;
+	width:36px;
 }
 .options3 li {
 	display:block;
 	border-left:1px solid #000;
 	xheight:38px;
 	xmargin:0 -4px 0 0;
-	padding: 15px;
+	padding: 15px 0;
 	list-style:none;
+	text-align:right;
 }
 
 .options3 .list {
@@ -7410,5 +7414,16 @@ ul.intbtn li a:hover{ text-decoration:none;}
 	background:url(../img/bulb2.png) no-repeat center left;
 	border-radius:0 0 0 2px;
 	padding:5px 10px 5px 30px;
+}
+#accordion7 .btn-icon-toggle{ color:#313534;}
+.exploewsearch textarea {
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #cfd0d3;
+    display: block;
+    font-size: 16px;
+    min-height: 200px;
+    padding-left: 15px;
+    width: 100%;
 }
 
