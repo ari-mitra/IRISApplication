@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 <title>:: IRIS ::</title>
 
 <!-- BEGIN META -->
 <meta charset="utf-8">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="your,keywords">
 <meta name="description" content="Short explanation about this website">
@@ -54,7 +53,7 @@
 									</div>
 								</div><!--end .col -->
 								<div class="col-xs-6 text-right">
-									<a href="javascript:void();" type="submit" class="btn btn-block btn-primary btn-info logsin">Login</a>
+									<a href="dashboard.html" type="submit" class="btn btn-block btn-primary btn-info">Login</a>
 								</div><!--end .col -->
 							</div><!--end .row -->
 						</form>
@@ -96,8 +95,7 @@
 <!-- END BASE --> 
 
 <!-- BEGIN JAVASCRIPT --> 
-
-<script src="phonegap.js"></script> 
+<script src="phonegap.js"></script>
 <script src="js/modules/irisapp/libs/jquery/jquery-1.11.2.min.js"></script> 
 <script src="js/modules/irisapp/libs/jquery/jquery-migrate-1.2.1.min.js"></script> 
 <script src="js/modules/irisapp/libs/bootstrap/bootstrap.min.js"></script> 
@@ -113,36 +111,7 @@
 <script src="js/modules/irisapp/core/cache/63d0445130d69b2868a8d28c93309746.js"></script> 
 <script src="js/modules/irisapp/core/demo/Demo.js"></script> 
 <script src="js/modules/irisapp/core/demo/DemoDashboard.js"></script> 
-<script>
-    var BASE_URL='http://dev.wrctechnologies.com/irisdesign/dev/';
-    $('.logsin').click(function(){
-        var username=$('#username').val();
-        var password=$('#password').val();
-        if(username==""){
-           $('#username').addClass('error');
-           $('#username').focus(); 
-        }else if(password==""){
-           $('#password').addClass('error');
-           $('#password').focus();  
-        }else{
-        $.ajax({
-            url:BASE_URL+'api',
-            data:{'username':username,'password':password},
-            type:'post',
-            success:function(resp){
-              var obj = $.parseJSON(resp);
-              if(obj.code=='100'){
-                  location.href='dashboard.html';
-              }else{
-                  //alert(obj.msg);
-                  $('#username').addClass('error');
-                  $('#username').focus();
-              }
-            }
-        });
-      }
-    });
-</script>
+
 <!-- END JAVASCRIPT -->
 
 </body>

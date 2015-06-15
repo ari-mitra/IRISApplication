@@ -582,7 +582,6 @@ body {
 	background-size: 100% 100%;
 	color: #313534;
 	-ms-overflow-style: scrollbar;
-	padding-top:20px;
 }
 .container {
 	padding: 0;
@@ -1874,7 +1873,7 @@ body:not(.menubar-first) .menubar-fixed-panel {
 }
 .gui-icon .fa:first-child, .gui-icon .md:first-child, .gui-icon .glyphicon:first-child {
 	position: absolute;
-	left: 0;
+	xleft: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
@@ -7425,6 +7424,7 @@ ul.intbtn li a:hover{ text-decoration:none;}
     min-height: 200px;
     padding-left: 15px;
     width: 100%;
+	padding-top: 15px;
 }
 
 .form-group .error ~ label:after, .form-group .error ~ .form-control-line:after {

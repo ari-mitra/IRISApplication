@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 <title>:: IRIS ::</title>
 
 <!-- BEGIN META -->
 <meta charset="utf-8">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="your,keywords">
 <meta name="description" content="Short explanation about this website">
@@ -125,7 +124,90 @@
 
 <!-- BEGIN JAVASCRIPT --> 
 
-<script src="js/modules/irisapp/libs/jquery/jquery-1.11.2.min.js"></script> 
+<script src="js/modules/irisapp/libs/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var html_body='<div class="col-sm-12 col-md-12 col-lg-12">'+
+					'<form>'+
+						'<div class=" floating-label">'+
+							'<input type="text" name="Subject1" id="Subject1" placeholder="Subject">'+
+							'<label for="Subject1"></label>'+
+						'</div>'+
+						'<div class="">'+
+									'<textarea name="textarea2" id="textarea2"  rows="3" placeholder="Write Text"></textarea>'+
+									'<label for="textarea2"></label>'+
+								'</div>'+
+                                
+                                '<div class="row">'+
+								'<div class="col-xs-6 text-left">'+
+									
+								'</div>'+
+								'<div class="col-xs-6 text-right">'+
+									'<a class="btn btn-block btn-primary btn-info" type="submit" href="#" style="margin-bottom:20px;">Send</a>'+
+								'</div>'+
+							'</div>'+
+					'</form>'+
+				'</div>';
+        $('.exploe2').click(function(){
+           // evt.preventDefault();
+            $(this).unbind('click');
+            //alert("ok");
+            $(this).removeClass('exploe2');
+            $(this).html(html_body);
+            
+        });
+//        $('.bulb2').click(function(){
+//            $('.options3').css('display','none');
+//            $('.newsfeed').removeClass('padright');
+//        });
+
+//Take from here dated 15-06-2015-----//
+        function a(){
+         //$("#menubar").show();
+         //$('#base').css('padding-left','64px');     
+         $('.options3').css('display','none');
+         $('.newsfeed').removeClass('padright');
+        }
+        function b(){ 
+         //$("#menubar").show();
+         //$('#base').css('padding-left','64px');     
+         $('.options3').css('display','block');
+         $('.newsfeed').addClass('padright');
+        }
+
+$(".bulb2").click(function() { 
+    return (this.tog = !this.tog) ? a() : b();
+  //e.stopPropagation();   
+});
+$('#picker').click(function(){
+    return (this.tog = !this.tog) ? c() : d();
+});    
+function c(){
+   $("#menubar").show(); 
+   $('#base').css('padding-left','240px');
+}
+function d(){
+   $("#menubar").show();  
+   $('#base').css('padding-left','64px'); 
+}
+//Hide & show menu left
+$('#picker,.bulb2').on('click', function(e) {
+   // $("#menubar").show();
+   // $('#base').css('padding-left','240px');
+    e.stopPropagation();
+    
+});
+
+$(document).on('click', function (e) {
+ // Do whatever you want; the event that'd fire if the "special" element has been clicked on has been cancelled.
+$("#menubar").hide();
+$('#base').css('padding-left','0');
+});
+
+//End here dated 15-06-2015-----//
+   
+    });
+</script> 
 <script src="js/modules/irisapp/libs/jquery/jquery-migrate-1.2.1.min.js"></script> 
 <script src="js/modules/irisapp/libs/bootstrap/bootstrap.min.js"></script> 
 <script src="js/modules/irisapp/libs/spin.js/spin.min.js"></script> 
